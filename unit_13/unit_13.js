@@ -162,7 +162,14 @@ let a8 = {
 };
 
 function f8() {
-
+    let out = '';
+    let key = document.querySelector('.i-8').value;
+    if (key in a8) {
+        out += a8[key];
+    } else {
+        out += 0
+    }
+    document.querySelector('.out-8').innerHTML = out;
 }
 
 document.querySelector('.b-8').onclick = f8;
