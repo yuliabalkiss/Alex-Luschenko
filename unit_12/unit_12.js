@@ -44,7 +44,7 @@ document.querySelector('.b-3').onclick = f3;
 function f4() {
     let a4 = [[1, 2, 3], 'go', [3, 4, 5], [6, [7, 'my']]];
     document.querySelector('.out-4').innerHTML = a4[1]
-    console.log(a4[1])
+    return a4[1];
 }
 
 document.querySelector('.b-4').onclick = f4;
@@ -232,34 +232,24 @@ document.querySelector('.b-12').onclick = f12;
 // При нажатии b-13 выполняете функцию f13. Функция должна присвоить переменной a13 массив эмулирующий шахматную доску. Причем массив должен создаваться с помощью циклов. Для проверки - выведите массив в консоль.
 
 
-let out = [];
-
 function f13() {
-    let out = 0;
     let a13 = [];
+    let p = 0;
+
     for (let i = 0; i < 8; i++) {
-
-        a13.push([]);
+        let t = [];
         for (let k = 0; k < 8; k++) {
-            if (out == 0) {
-                out = 1;
-                a13[i].push(1)
+            if (p % 2 === 0) {
+                t.push(1);
             } else {
-                out = 0;
-                a13[i].push(0)
-
+                t.push(0);
             }
+            p++;
         }
-        if (out == 0) {
-            out = 1;
-        } else {
-            out = 0
-        }
+        a13.push(t);
+        p++;
     }
-
-
     console.log(a13)
-
 }
 
 document.querySelector('.b-13').onclick = f13;
