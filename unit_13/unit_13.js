@@ -186,6 +186,15 @@ let a9 = {
 };
 
 function f9() {
+    let out = '';
+    let a = document.querySelector('.i-9').value;
+    for (let key in a9) {
+        if (a9[key] == a) {
+            out += key + ' '
+        }
+        document.querySelector('.out-9').innerHTML = out;
+    }
+
 
 }
 
@@ -196,8 +205,13 @@ document.querySelector('.b-9').onclick = f9;
 
 function f10(arr, val) {
 
-    //return true;
-    //return false;
+    for (let key in arr) {
+        if (arr[key] === val) {
+            return true;
+        }
+    }
+    return false;
+
 }
 
 document.querySelector('.b-10').onclick = () => {
@@ -206,7 +220,7 @@ document.querySelector('.b-10').onclick = () => {
         "d": 54,
         "m": 22,
     }
-    document.querySelector('.out-10').innerHTML = f10(a10, 22);
+    document.querySelector('.out-10').innerHTML = f10(a10, 92);
 };
 
 
@@ -222,6 +236,15 @@ let a11 = {
 };
 
 function f11() {
+
+    let a = document.querySelector('.i-11').value;
+    for (let key in a11) {
+        if (key === a) {
+            delete a11[a]
+        }
+        f5(a11, '.out-11');
+    }
+
 }
 
 document.querySelector('.b-11').onclick = f11;
@@ -238,7 +261,13 @@ let a12 = {
 };
 
 function f12() {
-
+    let a = document.querySelector('.i-12').value;
+    for (let key in a12) {
+        if (a12[key] == a) {
+            delete a12[key]
+        }
+        f5(a12, '.out-12');
+    }
 }
 
 document.querySelector('.b-12').onclick = f12;
