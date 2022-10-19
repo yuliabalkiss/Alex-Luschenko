@@ -283,7 +283,14 @@ let a13 = {
 };
 
 function f13() {
+    let sum = 0;
+    for (let key in a13) {
+        if (typeof a13[key] == 'number') {
+            sum += a13[key];
 
+        }
+    }
+    document.querySelector('.out-13').innerHTML = sum;
 }
 
 document.querySelector('.b-13').onclick = f13;
