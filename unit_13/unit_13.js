@@ -220,7 +220,7 @@ document.querySelector('.b-10').onclick = () => {
         "d": 54,
         "m": 22,
     }
-    document.querySelector('.out-10').innerHTML = f10(a10, 92);
+    document.querySelector('.out-10').innerHTML = f10(a10, 22);
 };
 
 
@@ -462,7 +462,17 @@ let a20 = {
 }
 
 function f20() {
-
+    let out = '';
+    for (let key in a20) {
+        for (let i = 0; i < a20[key].length; i++) {
+            for (let k = 0; k < a20[key][i].length; k++) {
+                if (a20[key][i][k] === 2) {
+                    out += a20[key][i][0] + " "
+                }
+            }
+        }
+    }
+    document.querySelector('.out-20').innerHTML = out;
 }
 
 document.querySelector('.b-20').onclick = f20
