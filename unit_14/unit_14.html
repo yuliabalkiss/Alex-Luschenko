@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
     <title>Unit 14</title>
 </head>
 
@@ -13,11 +14,52 @@
         <h1>UNIT 14. API Погода</h1>
         <h2><a href="https://itgid.info/course/javascript-2" target="_blank">JavaScript v.2.0 - курс Лущенко
                 Александра</a></h2>
-        <p>Верстку в этом юните - делаете самостоятельно. Имя CSS файла - любое.</p>
-        
+        <!-- <p>Верстку в этом юните - делаете самостоятельно. Имя CSS файла - любое.</p> -->
+        <div class="wrapper">
+            <div class="wrapper__weather">
+                <!-- <div class="out-14"></div> -->
+                <div class="table">
+                    <div class="table__name-city">
+                        <p class="city-name"></p>
+                        <p class="price">&deg;</p>
+                        <p class="disclaimer"></p>
+                    </div>
+                    <div class="icon"><span></span> </div>
+                    <select id="city" class="city-select">
+                        <option value="2950158">Berlin</option>
+                        <option value="625144">Minsk</option>
+                        <option value="456172">Riga</option>
+                        <option value="703448">Kyiv</option>
+                    </select>
+
+                    <hr>
+                    <div class="options">
+                        <span class='deg'></span>
+                        <span class='gust'></span>
+                        <span class='speed'></span>
+                        <span class='pressure'></span>
+                        <span class='humidity'></span>
+                    </div>
+                    <!-- <button class="button-primary">Go</button> -->
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
 
     </div>
-
     <script src="unit_14.js"></script>
 </body>
 

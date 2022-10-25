@@ -390,7 +390,7 @@ let a17 = {
 function f17() {
     let out = '';
     for (let key in a17) {
-        if (a16[key]['age'] > 30) {
+        if (a17[key]['age'] > 30) {
             out += a17[key]['name'] + ' '
         }
     }
