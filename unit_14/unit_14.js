@@ -2,8 +2,7 @@ const param = {
     "url": "https://api.openweathermap.org/data/2.5/",
     "appid": "4beade1ab16760b911b8d2ffaf847fb1"
 }
-
-
+//  получение данных о погоде
 function getWeather() {
     const cityId = document.querySelector('#city').value;
     fetch(`${param.url}weather?id=${cityId}&units=metric&APPID=${param.appid}`)
@@ -12,6 +11,30 @@ function getWeather() {
         }).then(showWeather);
 }
 
+// массив городов
+const cities = {
+    2950158: 'Berlin',
+    625144: 'Minsk',
+    456172: 'Rig',
+    703448: 'Kyiv',
+
+}
+
+
+// перебираем массив городов
+for (let key in cities) {
+    let option = document.createElement('option');
+    option.value = key;
+    option.innerHTML = cities[key];
+    document.querySelector('#city').append(option);
+}
+
+
+
+
+
+
+// вывод данных погоды
 
 function showWeather(data) {
     console.log(data)
