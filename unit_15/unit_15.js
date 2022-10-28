@@ -39,11 +39,23 @@ const f3 = () => {
 
 document.querySelector('.b-3').onclick = f3;
 
+// Task 4
 // При нажатии b-4 выполняете функцию f4. Функция должна проверить наличие в наборе s4 строки введенной пользователем в i-4. Если строка есть - то вывести в out-4 true. Если нет - false.
 
 let s4 = new Set(['a', 'b', 'c', 'z']);
 
-const f4 = () => { }
+const f4 = () => {
+    let out = '';
+
+    let input = document.querySelector('.i-4').value;
+    if (s4.has(input)) {
+        out = 'true'
+    } else {
+        out = 'false'
+    }
+
+    document.querySelector('.out-4').innerHTML = out;
+}
 
 document.querySelector('.b-4').onclick = f4;
 
@@ -53,7 +65,10 @@ document.querySelector('.b-4').onclick = f4;
 
 let s5 = new Set(['a', 'b', 'c', 'z', 'a2', 'b2', 'c2', 'z2']);
 
-const f5 = () => { }
+const f5 = () => {
+    let out = s5.size;
+    document.querySelector('.out-5').innerHTML = out;
+}
 
 document.querySelector('.b-5').onclick = f5;
 
