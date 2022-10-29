@@ -180,6 +180,7 @@ const f12 = () => {
     let mySet = new Set(myString);
     return mySet;
 }
+
 document.querySelector('.b-12').onclick = () => {
     console.log(f12());
 }
