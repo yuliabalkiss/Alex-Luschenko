@@ -108,10 +108,12 @@ document.querySelector('.b-7').onclick = f7;
 // При нажатии b-8 выполняете функцию f8. Функция должна перебрать набор s8 и добавить в массив ar8 только числа больше 5. Выведите массив в консоль.
 
 let s8 = new Set([1, 2, 3, 4, 5, 3, 4, 7, 9, 5, 7, 8, 9, 23, 45, 5, 2, 4, 5, 3, 24, 5, 2, 4, 56, 4, 3, 2, 335, 2, 23, 41, 3, 4, 1, 1, 4, 2, 2, 4, 5, 24, 5, 3, 22, 56]);
-let ar8 = [];
+
 
 const f8 = () => {
+    let ar8 = [];
     for (let value of s8) {
+
         if (value > 5)
             ar8.push(value)
     }
@@ -146,8 +148,9 @@ const f10 = (out_set, elem) => {
     let out = '';
     for (let value of out_set) {
         out += value + ' ';
-        return out;
+
     }
+
     document.querySelector(elem).innerHTML = out;
 }
 
@@ -194,8 +197,20 @@ let str13 = 'The name conjures up visions of plum pudding and Christmas punch qu
 
 
 const f13 = () => {
+    let res = {};
+    let myString = str13.split('').map((el => el));
+    let mySet = new Set(myString);
+    for (let item of mySet) {
+        let count = 0;
+        for (let i = 0; i < str13.length; i++) {
+            if (item === str13[i])
+                count++;
+        }
+        res[item] = count;
 
-    // return
+    }
+    return res;
+
 }
 
 document.querySelector('.b-13').onclick = () => {
