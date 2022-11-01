@@ -80,7 +80,7 @@ let a6 = [1, 2, 3, 4, 5, 3, 4, 5, 2, 4, 5, 3, 24, 5, 2, 4, 56, 4, 3, 2, 335, 2, 
 const f6 = () => {
     let mySet = new Set(a6)
     document.querySelector('.out-6').innerHTML = mySet.size;
-    // console.log(mySet)
+    console.log(a6)
 
 }
 
@@ -108,10 +108,9 @@ document.querySelector('.b-7').onclick = f7;
 // При нажатии b-8 выполняете функцию f8. Функция должна перебрать набор s8 и добавить в массив ar8 только числа больше 5. Выведите массив в консоль.
 
 let s8 = new Set([1, 2, 3, 4, 5, 3, 4, 7, 9, 5, 7, 8, 9, 23, 45, 5, 2, 4, 5, 3, 24, 5, 2, 4, 56, 4, 3, 2, 335, 2, 23, 41, 3, 4, 1, 1, 4, 2, 2, 4, 5, 24, 5, 3, 22, 56]);
-
-
+let ar8 = [];
 const f8 = () => {
-    let ar8 = [];
+    ar8 = [];
     for (let value of s8) {
 
         if (value > 5)
