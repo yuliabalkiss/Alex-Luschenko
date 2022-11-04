@@ -270,7 +270,13 @@ document.querySelector('.b-14').addEventListener('click', f14);
 
 
 function f15() {
+    let myList = document.querySelectorAll('.out-15');
 
+    for (let value of myList) {
+        value.innerHTML = 15;
+    }
+    // console.log(value);
+    // console.log(myList);
 }
 
 document.querySelector('.b-15').addEventListener('click', f15);
