@@ -67,7 +67,7 @@ function f5() {
             out.push(value)
         }
     }
-    // console.log(out)
+    console.log(out)
     return out
 }
 
@@ -84,8 +84,9 @@ function f6() {
     let out = [];
     for (let i = 0; i < a6.length; i++) {
         for (let k = 0; k < a6[i].length; k++) {
-            out.push(a6[i][k])
+            out.push(a6[i][k] + ' ');
         }
+
     }
     // console.log(out);
     document.querySelector('.out-6').innerHTML = out;
@@ -121,11 +122,10 @@ document.querySelector('.b-7').addEventListener('click', () => {
 let a8 = [{ id: 23, name: 'Ivan' }, { id: 45, name: 'Petr' }];
 
 function f8() {
-    let myArr = {};
+    let myArr = [];
     for (let value of a8) {
         let id = value.id;
-        // let name = value.name;
-        myArr[id] = id;
+        myArr.push(id);
     }
     a8 = myArr;
     return a8;
@@ -142,6 +142,13 @@ let a9 = [[4, 3, 2], [2, 5], [0, 0, 0, 0, 0]];
 
 function f9() {
 
+    let maxIndex = 0
+    for (value of a9) {
+        if (value.length > maxIndex) {
+            maxIndex = value.length - 1
+        }
+    }
+    return maxIndex;
 }
 
 document.querySelector('.b-9').addEventListener('click', () => {
@@ -152,9 +159,22 @@ document.querySelector('.b-9').addEventListener('click', () => {
 //При нажатии .b-10 выполняете функцию f10. Функция должна преобразовывать массив a10 в ассоциативный массив вида {4: 4, 6: 6, 9: 9, hello : "hello"} и возвращать полученный массив.
 
 let a10 = [4, 6, 9, 'Hello'];
-
+let myArr = [];
 function f10() {
+    let myObj = {};
+    for (let i = 0; i < a10.length; i++) {
+        console.log(myObj = (a10[i]));
 
+        // for (let key in myObj) {
+
+        //     console.log(myObj.key)
+        // }
+        // myObj.key = a10[i]
+        myArr.push(myObj);
+
+    }
+
+    return myArr;
 }
 
 document.querySelector('.b-10').addEventListener('click', () => {
