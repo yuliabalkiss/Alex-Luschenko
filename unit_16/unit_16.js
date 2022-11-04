@@ -226,13 +226,20 @@ document.querySelector('.b-12').addEventListener('click', f12);
 let a13 = 'testone';
 
 function f13() {
-    let out = '';
-    let myStr = [];
-    myStr.push(a13.split('').join(' '));
+    // let out = '';
+    // let myStr = [];
+    // myStr.push(a13.split('').join(' '));
 
-    for (let value of myStr) {
-        out = value;
+    // for (let value of myStr) {
+    //     out += value;
+    // }
+
+
+    let out = '';
+    for (value of a13) {
+        out += value + ' '
     }
+    // console.log(out)
     document.querySelector('.out-13').innerHTML = out
 }
 
@@ -249,8 +256,8 @@ function f14() {
     console.log(a14)
     let out = '';
     for (let value of a14) {
-        console.log(out = value)
-        out.split('').join(' ')
+        out += value + ' '
+        console.log(out);
     }
 
     document.querySelector('.out-14').innerHTML = out;
