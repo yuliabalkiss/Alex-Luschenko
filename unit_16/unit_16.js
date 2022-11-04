@@ -192,7 +192,13 @@ let a11 = {
 }
 
 function f11() {
-
+    let out = ''
+    for (let key in a11) {
+        if (a11[key] > 10) {
+            out += a11[key] + ' '
+        }
+    }
+    document.querySelector('.out-11').innerHTML = out;
 }
 
 document.querySelector('.b-11').addEventListener('click', f11);
@@ -203,7 +209,12 @@ document.querySelector('.b-11').addEventListener('click', f11);
 let a12 = [4, 5, 6, 7];
 
 function f12() {
+    let out = '';
+    for (let value of a12) {
+        out += value + ' ';
 
+    }
+    document.querySelector('.out-12').innerHTML = out;
 }
 
 document.querySelector('.b-12').addEventListener('click', f12);
@@ -215,7 +226,14 @@ document.querySelector('.b-12').addEventListener('click', f12);
 let a13 = 'testone';
 
 function f13() {
+    let out = '';
+    let myStr = [];
+    myStr.push(a13.split('').join(' '));
 
+    for (let value of myStr) {
+        out = value;
+    }
+    document.querySelector('.out-13').innerHTML = out
 }
 
 document.querySelector('.b-13').addEventListener('click', f13);
@@ -228,7 +246,14 @@ document.querySelector('.b-13').addEventListener('click', f13);
 let a14 = new Set([4, 5, 6]);
 
 function f14() {
+    console.log(a14)
+    let out = '';
+    for (let value of a14) {
+        console.log(out = value)
+        out.split('').join(' ')
+    }
 
+    document.querySelector('.out-14').innerHTML = out;
 }
 
 document.querySelector('.b-14').addEventListener('click', f14);
