@@ -243,7 +243,11 @@ let a13_num = 9;
 
 
 function t13() {
-
+    if (a13.includes(a13_num)) {
+        return true;
+    } else {
+        return false;
+    }
 
 }
 
