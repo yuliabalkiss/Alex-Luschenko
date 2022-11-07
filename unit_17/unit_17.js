@@ -35,7 +35,7 @@ document.querySelector('.b-1').onclick = () => {
 let a2 = [2, 3, 4, 5, 10, 11, 12];
 
 function t2() {
-    let a2_res = a2.map(el => {
+    a2_res = a2.map(el => {
         return el ** 2;
     });
     return a2_res;
@@ -53,7 +53,10 @@ document.querySelector('.b-2').onclick = () => {
 let a3 = [4, "3", 6, 7, "12", 34, "56", 78, 90, 11];
 
 function t3() {
-
+    a3_res = a3.map(el => {
+        return Number(el)
+    });
+    return a3_res;
 }
 
 document.querySelector('.b-3').onclick = () => {
@@ -67,7 +70,12 @@ document.querySelector('.b-3').onclick = () => {
 let a4 = [4, "3", 6, 7, "12", 34, "56", 78, 90, 11];
 
 function t4() {
-
+    a4_res = a4.filter(el => {
+        if (typeof el == 'number') {
+            return el;
+        }
+    });
+    return a4_res;
 }
 
 document.querySelector('.b-4').onclick = () => {
