@@ -111,7 +111,12 @@ document.querySelector('.b-5').onclick = () => {
 let a6 = [3, 14, 15, 92, "6", "5", "hello", 32];
 
 function t6() {
-
+    a6_res = a6.filter(el => {
+        if (typeof el === 'number' && el > 14) {
+            return el;
+        }
+    });
+    return a6_res;
 }
 
 document.querySelector('.b-6').onclick = () => {
@@ -125,7 +130,10 @@ document.querySelector('.b-6').onclick = () => {
 let a7 = ['Alto`s Adventure', 'Angry Birds 2', 'Anno 2205', 'Assassin`s Creed Chronicles'];
 
 function t7() {
-
+    a7_res = a7.map(el => {
+        return el.toLowerCase();
+    });
+    return a7_res;
 }
 
 document.querySelector('.b-7').onclick = () => {
@@ -139,6 +147,12 @@ let a8 = [3, 14, 15, 92, 7, 32, 59];
 
 function t8() {
 
+    for (let i = 0; i < a8.length; i++) {
+        if (a8[i] % 2 === 0) {
+            a8_res.push(i)
+        }
+    }
+    return a8_res;
 }
 
 document.querySelector('.b-8').onclick = () => {
