@@ -167,6 +167,12 @@ document.querySelector('.b-8').onclick = () => {
 let a9 = ['Quantum Break', 'Gears of War 4', 'Mass Effect: Andromeda', 'Far Cry Primal'];
 
 function t9() {
+    a9 = [];
+    a9.forEach(el => {
+        a9.push(el.toLowerCase());
+        return a9;
+
+    })
 
 }
 
@@ -196,7 +202,13 @@ document.querySelector('.b-10').onclick = () => {
 let a11 = [2, 13, 14, -7, 9, 5, 0, -2, 14];
 
 function t11() {
+    a11_res = a11.filter((el, index) => {
+        if (el[index] % 2 === 0) {
 
+            return el[index];
+        }
+    });
+    return a11_res;
 
 }
 
@@ -211,7 +223,11 @@ let a12 = [2, 13, 14, -7, 9, 5, 0, -2, 14];
 // a12 = 8; // на этой переменной можно проверить работает или нет ваша функция.
 
 function t12() {
-
+    if (Array.isArray(a12)) {
+        return true;
+    } else {
+        return false;
+    }
 
 }
 
