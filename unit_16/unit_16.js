@@ -67,7 +67,7 @@ function f5() {
             out.push(value)
         }
     }
-    console.log(out)
+    // console.log(out)
     return out
 }
 
@@ -246,11 +246,11 @@ document.querySelector('.b-13').addEventListener('click', f13);
 let a14 = new Set([4, 5, 6]);
 
 function f14() {
-    console.log(a14)
+    // console.log(a14)
     let out = '';
     for (let value of a14) {
         out += value + ' '
-        console.log(out);
+        // console.log(out);
     }
 
     document.querySelector('.out-14').innerHTML = out;
