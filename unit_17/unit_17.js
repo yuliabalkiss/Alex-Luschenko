@@ -319,8 +319,12 @@ let a15 = [
 
 
 function t15() {
+    a15_res = a15.filter(el => {
+        if (el.pnum !== '' && el.pnum.length === 6)
+            return true;
 
-
+    })
+    return a15_res;
 }
 
 document.querySelector('.b-15').onclick = () => {
