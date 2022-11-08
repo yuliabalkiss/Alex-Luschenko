@@ -159,7 +159,7 @@ document.querySelector('.b-8').onclick = () => {
     console.log(t8());
 }
 
-// НЕ ГОТОВ
+
 
 // Task 9 ============================================
 /*  Дан массив a9 = ['Quantum Break', 'Gears of War 4', 'Mass Effect: Andromeda', 'Far Cry Primal']. С помощью forEach, переберите массив a9 и преобразуйте все записи в массиве в нижний регистр. Действия должны запускаться при вызове функции t9. Функция должна возвращать a9. */
@@ -189,8 +189,15 @@ document.querySelector('.b-9').onclick = () => {
 let a10 = [2, 13, 14, -7, 9, 5, 0, -2, 14];
 
 function t10() {
-
-
+    let myArr = [];
+    a10.forEach(el => {
+        if (el < 0) {
+            el = 0;
+        }
+        myArr.push(el)
+    })
+    a10 = myArr;
+    return a10;
 }
 
 document.querySelector('.b-10').onclick = () => {
