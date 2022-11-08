@@ -271,8 +271,11 @@ let a14_sym = 'e';
 
 
 function t14() {
-
-
+    if (a14.includes(a14_sym.toLowerCase() || a14_sym.toUpperCase())) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 document.querySelector('.b-14').onclick = () => {
