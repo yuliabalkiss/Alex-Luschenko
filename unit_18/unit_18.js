@@ -85,8 +85,8 @@ let str6 = 'helloworld';
 
 function t6() {
     a6_res = [];
-    a6_res.push(str6.split('').join(' '));
-    console.log(a6_res)
+    a6_res.push(str6.split('-'));
+    console.log(typeof a6_res)
     document.querySelector('.out-6').innerHTML = a6_res;
 }
 
@@ -98,9 +98,10 @@ document.querySelector('.b-6').onclick = t6;
 let str7 = 'hello world hi mazai';
 function t7() {
     let a = []
+    // let re = /\s*;\s*/;
     let out = ''
-    a.push(str7.split(''));
-    console.log(a)
+    out = str7.split('').join('-');
+    console.log(typeof str7)
 
     document.querySelector(".out-7").innerHTML = out;
 }
