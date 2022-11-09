@@ -6,7 +6,7 @@ let a1 = [5, 7, 9, 11, 13, 15];
 function f1() {
     let out = '';
     for (let i = 0; i < a1.length; i++) {
-        out += i + ' ';
+        out += a1[i] + ' ';
     }
     document.querySelector('.out-1').innerHTML = out;
 }
@@ -81,12 +81,16 @@ document.querySelector('.b-5').addEventListener('click', () => {
 let a6 = [[1, 2], [3, 4], [5, 6]];
 
 function f6() {
-    let out = [];
+    let out = '';
+    let myArr = [];
     for (let i = 0; i < a6.length; i++) {
         for (let k = 0; k < a6[i].length; k++) {
-            out.push(a6[i][k] + ' ');
+            myArr.push(a6[i][k]);
         }
 
+    }
+    for (let i = 0; i < myArr.length; i++) {
+        out += myArr[i] + ' ';
     }
     // console.log(out);
     document.querySelector('.out-6').innerHTML = out;
