@@ -53,11 +53,8 @@ document.querySelector('.b-3').onclick = t3;
 
 function t4() {
     a4_res = [];
-    let myArr = [];
     let val = document.querySelectorAll('.task-4');
-
     val.forEach(el => {
-
         a4_res.push(el.getAttribute('data'))
     });
     console.log(a4_res)
@@ -70,7 +67,9 @@ document.querySelector('.b-4').onclick = t4;
 /*  На странице созданы 3 p.task-5 c атрибутом data. С помощью forEach переберите их и добавьте событие клик. Напишите функцию t5, которая будет запускаться при клике и добавлять атрибут data элемента, по которому кликнули в массив a5_res.*/
 
 function t5() {
-
+    a5_res = [];
+    a5_res.push(this.getAttribute('data'));
+    console.log(a5_res)
 }
 
 document.querySelectorAll('.task-5').forEach(elem => {
