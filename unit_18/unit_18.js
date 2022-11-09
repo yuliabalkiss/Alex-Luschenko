@@ -99,7 +99,7 @@ let str7 = 'hello world hi mazai';
 function t7() {
     let a = []
     let out = ''
-    a.push(str7.split('').join(''));
+    a.push(str7.split(''));
     console.log(a)
 
     document.querySelector(".out-7").innerHTML = out;
@@ -109,9 +109,11 @@ document.querySelector('.b-7').onclick = t7;
 
 // Task 8 ============================================
 /*  Дан массив a8 = [1,2,66,77,15] - преобразуйте ее в строку. Разделитель - дефис. Результат присвойте a8_res. Запускаться решение должно при вызове функции t8. */
-
+let a8 = [1, 2, 66, 77, 15];
 function t8() {
-
+    a8_res = a8.join('-')
+    // console.log(typeof a8_res)
+    document.querySelector('.out-8').innerHTML = a8_res;
 }
 
 document.querySelector('.b-8').onclick = t8;
