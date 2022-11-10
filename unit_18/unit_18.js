@@ -77,7 +77,7 @@ document.querySelectorAll('.task-5').forEach(elem => {
 });
 
 
-//не готов
+
 // Task 6 ============================================
 /*  Дана строка str6='helloworld' - преобразуйте ее в массив (c разбиением по буквам) и присвойте a6_res. Выведите на страницу. Запускаться решение должно при вызове функции t6. */
 
@@ -92,18 +92,16 @@ function t6() {
 
 document.querySelector('.b-6').onclick = t6;
 
-// не готов
+
 // Task 7 ============================================
 /*  Дана строка str7='hello world hi mazai' - преобразуйте ее в массив и разбейте по словам. Причем слова не должны содержать пробелов и присвойте a7_res. выведите на страницу.  Запускаться решение должно при вызове функции t7. */
 let str7 = 'hello world hi mazai';
 function t7() {
-    let a = []
-    // let re = /\s*;\s*/;
-    let out = ''
-    out = str7.split('').join('-');
-    console.log(typeof str7)
 
-    document.querySelector(".out-7").innerHTML = out;
+    a7_res = str7.split(' ');
+    console.log(a7_res)
+
+    document.querySelector(".out-7").innerHTML = a7_res;
 }
 
 document.querySelector('.b-7').onclick = t7;
