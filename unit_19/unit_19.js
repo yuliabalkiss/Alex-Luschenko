@@ -44,7 +44,7 @@ document.querySelector('.div-3').onclick = t3;
 function t4() {
     let out = document.querySelector('.div-4').textContent;
     document.querySelector('.out-4').innerHTML = out;
-    console.log(out)
+
     return out;
 
 }
@@ -55,8 +55,8 @@ document.querySelector('.div-4').ondblclick = t4;
 /*  Дан блок .div-5.active. Добавьте на него событие двойной клик, по которому удалется класс active если он есть и добавляется если такого класса нет. */
 
 function t5() {
-    let block = document.querySelector('.div-5');
-    block.classList.add('.active');
+    let bl = document.querySelector('.div-5');
+    bl.classList.add('active');
 }
 document.querySelector('.div-5').ondblclick = t5;
 
@@ -65,10 +65,11 @@ document.querySelector('.div-5').ondblclick = t5;
 /*  Дан блок .div-6 и список .ul-6. При двойном клике на блоке скрывайте .ul-6 еcли он показан и показывайте если скрыт. Скрытие и показ делайте через добавление - удаление класса .hide */
 
 function t6() {
-
+    let bl = document.querySelector('.ul-6');
+    bl.classList.add('hide');
 }
 
-// ваше событие здесь!!!
+document.querySelector('.div-6').onclick = t6;
 
 
 // Task 7 ============================================
