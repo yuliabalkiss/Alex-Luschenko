@@ -16,13 +16,9 @@ document.querySelector('.div-1').onclick = t1;
 function t2() {
     let out = document.querySelector('.out-2');
     out.innerHTML = event.altKey;
-    console.log(event);
+    // console.log(event);
     return event.altKey;
-
-
-
 }
-
 
 document.querySelector('.div-2').onclick = t2;
 
@@ -33,10 +29,13 @@ document.querySelector('.div-2').onclick = t2;
 let w3 = 75;
 
 function t3() {
+    let out = document.querySelector('.out-3');
+    w3 += 5;
+    out.innerHTML = w3;
 
 }
 
-// ваше событие здесь!!!
+document.querySelector('.div-3').onclick = t3;
 
 
 // Task 4 ============================================
