@@ -14,10 +14,17 @@ document.querySelector('.div-1').onclick = t1;
 /*  Добавьте на блок .div-2 событие клик и по клику запуск функции t2. Функция должна возвращать true или false в зависимости от того, нажата ли клавиша alt или нет в момент клика. Также, выводите на экран результат. Вывод осуществляется в out-2. */
 
 function t2() {
+    let out = document.querySelector('.out-2');
+    out.innerHTML = event.altKey;
+    console.log(event);
+    return event.altKey;
+
+
 
 }
 
-// ваше событие здесь!!!
+
+document.querySelector('.div-2').onclick = t2;
 
 
 // Task 3 ============================================
