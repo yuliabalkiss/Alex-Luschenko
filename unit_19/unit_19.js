@@ -56,7 +56,12 @@ document.querySelector('.div-4').ondblclick = t4;
 
 function t5() {
     let bl = document.querySelector('.div-5');
-    bl.classList.add('active');
+    if (bl.classList.contains('active')) {
+        bl.classList.remove('active');
+    } else {
+        bl.classList.add('active');
+    }
+
 }
 document.querySelector('.div-5').ondblclick = t5;
 
