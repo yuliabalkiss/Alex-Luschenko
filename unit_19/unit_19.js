@@ -66,7 +66,13 @@ document.querySelector('.div-5').ondblclick = t5;
 
 function t6() {
     let bl = document.querySelector('.ul-6');
-    bl.classList.add('hide');
+
+    if (bl.classList.contains('hide')) {
+        bl.classList.remove('hide');
+    } else {
+        bl.classList.add('hide');
+    }
+
 }
 
 document.querySelector('.div-6').onclick = t6;
