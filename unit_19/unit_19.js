@@ -44,6 +44,7 @@ document.querySelector('.div-3').onclick = t3;
 function t4() {
     let out = document.querySelector('.div-4').textContent;
     document.querySelector('.out-4').innerHTML = out;
+    console.log(out)
     return out;
 
 }
