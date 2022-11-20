@@ -120,7 +120,7 @@ function t10() {
     let block = document.querySelector('.div-10 img');
     block.src = "img/2.png"
 }
-document.querySelector('.div-10').mouseenter = t10;
+document.querySelector('.div-10').onmouseenter = t10;
 // ваше событие здесь!!!
 
 // Task 11 ============================================
@@ -129,13 +129,13 @@ document.querySelector('.div-10').mouseenter = t10;
 function t11() {
     let block = document.querySelector('.div-11 img');
     block.src = "img/2.png";
-    if (block.ondblclick) {
-        block.src = 'img/1.png'
+    document.querySelector('.div-11 img').onmouseleave = function () {
+        block.src = "img/1.png"
     }
 
-
 }
-document.querySelector('.div-11').onclick = t11;
+
+document.querySelector('.div-11').onmouseenter = t11;
 // ваше событие здесь!!!
 
 // Task 12 ============================================
