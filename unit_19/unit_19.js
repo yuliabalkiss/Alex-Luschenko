@@ -141,8 +141,11 @@ document.querySelector('.div-11').onmouseenter = t11;
 // Task 12 ============================================
 /*  Дан блок .div-12. Добавьте на него событие mousedown - при нажатии кнопки мыши - добавляйте ему класс active. */
 
-// функцию пишите самостоятельно
-
+function t12() {
+    let a = document.querySelector('.div-12')
+    a.classList.toggle('active');
+}
+document.querySelector('.div-12').onmousedown = t12;
 // ваше событие здесь!!!
 
 
