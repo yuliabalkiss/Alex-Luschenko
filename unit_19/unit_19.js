@@ -57,13 +57,8 @@ document.querySelector('.div-4').ondblclick = t4;
 /*  Дан блок .div-5.active. Добавьте на него событие двойной клик, по которому удалется класс active если он есть и добавляется если такого класса нет. */
 
 function t5() {
-    let bl = document.querySelector('.div-5');
-    if (bl.classList.contains('active')) {
-        bl.classList.remove('active');
-    } else {
-        bl.classList.add('active');
-    }
-
+    let block = document.querySelector('.div-5');
+    block.classList.toggle('active');
 }
 document.querySelector('.div-5').ondblclick = t5;
 
@@ -73,13 +68,7 @@ document.querySelector('.div-5').ondblclick = t5;
 
 function t6() {
     let bl = document.querySelector('.ul-6');
-
-    if (bl.classList.contains('hide')) {
-        bl.classList.remove('hide');
-    } else {
-        bl.classList.add('hide');
-    }
-
+    bl.classList.toggle('hide');
 }
 
 document.querySelector('.div-6').onclick = t6;
