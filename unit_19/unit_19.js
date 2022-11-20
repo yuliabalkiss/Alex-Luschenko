@@ -89,9 +89,10 @@ document.querySelector('.div-6').onclick = t6;
 /*  Дан блок .div-7. При клике правой кнопкой мыши на блоке добавляйте ему класс .active. При повторном клике - удаляйте. */
 
 function t7() {
-
+    let block = document.querySelector('.div-7');
+    block.classList.toggle('active')
 }
-
+document.querySelector('.div-7').oncontextmenu = t7;
 // ваше событие здесь!!!
 
 // Task 8 ============================================
