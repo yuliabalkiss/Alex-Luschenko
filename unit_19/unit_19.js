@@ -107,7 +107,6 @@ document.querySelector('.ch-8').onchange = t8;
 function t9() {
     let block = document.querySelector('.div-9 img');
     block.src = "img/2.png"
-
 }
 
 document.querySelector('.div-9').oncontextmenu = t9;
@@ -118,18 +117,25 @@ document.querySelector('.div-9').oncontextmenu = t9;
 /*  Дан блок .div-10. Внутри блока - изображение 1.png. При наведении мыши (mouseenter)  - меняйте изображение на 2.png. */
 
 function t10() {
-
+    let block = document.querySelector('.div-10 img');
+    block.src = "img/2.png"
 }
-
+document.querySelector('.div-10').mouseenter = t10;
 // ваше событие здесь!!!
 
 // Task 11 ============================================
 /*  Дан блок .div-11. Внутри блока - изображение 1.png. При наведении мыши (mouseenter)  - меняйте изображение на 2.png. При уведении мыши - mouseleave - возвращайте исходное изображение. */
 
 function t11() {
+    let block = document.querySelector('.div-11 img');
+    block.src = "img/2.png";
+    if (block.ondblclick) {
+        block.src = 'img/1.png'
+    }
+
 
 }
-
+document.querySelector('.div-11').onclick = t11;
 // ваше событие здесь!!!
 
 // Task 12 ============================================
