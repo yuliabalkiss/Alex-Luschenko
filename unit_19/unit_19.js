@@ -216,9 +216,14 @@ document.querySelector('.div-18').addEventListener('mouseenter', t18)
 /*  Дан блок div-19. Напишите фукнцию t19 которая выводит в данный блок его классы при событии onmouseout. */
 
 function t19() {
-
+    let out = ''
+    let clList = document.querySelector('.div-19').classList;
+    for (let i = 0; i < clList.length; i++) {
+        out += clList[i] + ' ';
+    }
+    document.querySelector('.div-19').innerHTML = out;
 }
-// ваше событие здесь!!!
+document.querySelector('.div-19').addEventListener('mouseout', t19)
 
 
 // Task 20 ============================================
