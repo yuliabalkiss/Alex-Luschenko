@@ -228,8 +228,11 @@ document.querySelector('.div-19').addEventListener('mouseout', t19)
 
 // Task 20 ============================================
 /*  Дан элемент progress. Напишите фукнцию t20 которая увеличивает его value на 1 при каждом событии mousemove внутри progress. */
-
+let p = 10;
 function t20() {
+    p++;
+    document.querySelector('#value').innerHTML = p;
+    document.querySelector('progress').value = p;
 
 }
-// ваше событие здесь!!!
+document.querySelector('progress').addEventListener('mousemove', t20)
