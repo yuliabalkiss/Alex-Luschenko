@@ -153,7 +153,9 @@ document.querySelector('.div-12').onmousedown = t12;
 
 function f13() {
     this.classList.add('active')
-    document.querySelector('.div-13').onmouseup = () => this.classList.remove('active')
+    document.querySelector('.div-13').onmouseup = function () {
+        this.classList.remove('active')
+    }
 }
 document.querySelector('.div-13').onmousedown = f13;
 
@@ -161,8 +163,10 @@ document.querySelector('.div-13').onmousedown = f13;
 /*  Дан блок .div-14. При нажатии кнопки b-14 добавляйте к нему событие onclick - которое, при клике добавляем блоку div-14 класс active. */
 
 function t14() {
-
+    let block = document.querySelector('.div-14');
+    block.classList.toggle('active')
 }
+
 document.querySelector('.b-14').onclick = t14;
 
 
