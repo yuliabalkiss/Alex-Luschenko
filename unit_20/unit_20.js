@@ -12,7 +12,7 @@ document.querySelector('.i-1').onkeydown = t1;
 
 function t2(event) {
     console.log(event);
-
+    document.querySelector('.out-2').textContent = event.keyCode;
 }
 
 document.querySelector('.i-2').onkeypress = t2;
