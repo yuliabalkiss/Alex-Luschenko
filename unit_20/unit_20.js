@@ -3,7 +3,9 @@
 /* Дан input .i-1. Напишите функцию t1, которая по событию keydown считывает содержимое event.key и добавляет в .out-1. Во всех последующих задачах - работаем с латиницей и цифрами. */
 
 function t1(event) {
-    console.log(event);
+    let out = event.key
+
+    document.querySelector('.out-1').innerHTML = out;
 }
 
 document.querySelector('.i-1').onkeydown = t1;
@@ -56,7 +58,7 @@ function t6() {
     // return false;
 }
 
-document.querySelector('.i-6').onkeypress= t6;
+document.querySelector('.i-6').onkeypress = t6;
 
 
 // Task 7 ============================================
@@ -68,15 +70,15 @@ function t7() {
 
 }
 
-document.querySelector('.i-7').onkeydown= t7;
+document.querySelector('.i-7').onkeydown = t7;
 
 // Task 8 ============================================
 /*  Дан input .i-8. Напишите функцию t8, которая дописывает в .out-8 вводимый в input текст, но заменяет i на 1, o на 0, l на 7. */
 
 const a8 = {
-    i : 1,
-    o : 0,
-    l : 7
+    i: 1,
+    o: 0,
+    l: 7
 }
 
 function t8(event) {
@@ -85,7 +87,7 @@ function t8(event) {
     // 3. Если есть дописываем в out-8 символ из массива a8. Если нет - введенный символ.
 }
 
-document.querySelector('.i-8').onkeydown= t8;
+document.querySelector('.i-8').onkeydown = t8;
 
 
 // Task 9 ============================================
