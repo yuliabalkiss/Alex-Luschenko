@@ -41,7 +41,14 @@ document.querySelector('.i-3').onkeypress = t3;
 
 function t4(event) {
     console.log(event.keyCode);
+    let out = []
+    if (event.keyCode == toLowerCase(event.keyCode)) {
+        out.push(event.keyCode);
+    }
 
+
+
+    document.querySelector('.out-4').textContent = out;
 }
 
 document.querySelector('.i-4').onkeypress = t4;
