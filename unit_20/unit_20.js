@@ -3,11 +3,8 @@
 /* Дан input .i-1. Напишите функцию t1, которая по событию keydown считывает содержимое event.key и добавляет в .out-1. Во всех последующих задачах - работаем с латиницей и цифрами. */
 
 function t1(event) {
-    let out = event.key
-
-    document.querySelector('.out-1').innerHTML = out;
+    document.querySelector('.out-1').textContent = event.key;
 }
-
 document.querySelector('.i-1').onkeydown = t1;
 
 // Task 2 ============================================
