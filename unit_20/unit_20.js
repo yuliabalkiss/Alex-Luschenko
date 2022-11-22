@@ -22,7 +22,15 @@ document.querySelector('.i-2').onkeypress = t2;
 
 
 function t3(event) {
+    console.log(event)
+    let out = ''
+    if (event.keyCode > 57) {
+        out = 'true'
 
+    } if (event.keyCode <= 57) {
+        out = 'false'
+    }
+    document.querySelector('.out-3').textContent = out;
 }
 
 document.querySelector('.i-3').onkeypress = t3;
