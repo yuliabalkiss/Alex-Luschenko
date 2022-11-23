@@ -117,13 +117,12 @@ document.querySelector('.i-8').onkeydown = t8;
 
 // Task 9 ============================================
 /* Дан input .i-9. Напишите функцию t9, выводит в .out-9 количество (число) нажатых клавиш стрелка вниз. */
-let count = 0;
+let count9 = 0;
 function t9(event) {
-
     if (event.key === 'ArrowDown') {
-        count++
+        count9++
     }
-    document.querySelector('.out-9').innerHTML = count;
+    document.querySelector('.out-9').innerHTML = count9;
 }
 
 document.querySelector('.i-9').onkeydown = t9;
@@ -137,6 +136,8 @@ let w = 75;
 
 function t10(event) {
     // увеличиваем  h, w, потом присваиваем как свойства...
+    console.log(event)
+
 
 }
 
