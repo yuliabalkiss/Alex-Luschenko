@@ -52,10 +52,10 @@ document.querySelector('.i-4').onkeypress = t4;
 
 // Task 5 ============================================
 /*  Дан input .i-5. Напишите функцию t5, которая выводит в .out-5 все вводимые символы в верхнем регистре. Т.е. пользователь ввел AbCd и функция выведет ABCD. */
-
+let out5 = '';
 function t5(event) {
-    console.log(event);
-
+    out5 += event.key.toUpperCase()
+    document.querySelector('.out-5').innerHTML = out5;
 }
 
 document.querySelector('.i-5').onkeydown = t5;
@@ -63,8 +63,13 @@ document.querySelector('.i-5').onkeydown = t5;
 // Task 6 ============================================
 /*  Дан input .i-6. Напишите функцию t6, которая позволяет вводить в i-6 только символы в нижнем регистре. Т.е. мы до функции создаем строку. Внутри функции проверяем код символа. Если символ - в нижнем регистре - добавляем в строку. Потом принудительно присваиваем строку в value input i-6. Чтобы блокировать стандартный вывод в input в конце функции пишем return false;  */
 
-function t6() {
-    // return false;
+let out6 = '';
+function t6(event) {
+    if (event.key.toLowerCase() === event.key) {
+        out6 += event.key
+    }
+    document.querySelector('.i-6').value = out6;
+    return false;
 }
 
 document.querySelector('.i-6').onkeypress = t6;
