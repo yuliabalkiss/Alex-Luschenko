@@ -159,10 +159,29 @@ document.querySelector('.i-10').onkeydown = t10;
 4. Самостоятельно добавьте все цифры и второй ряд клавиш от a до l
 5. Самостоятельно добавьте клавишу alt, enter.
 */
-
+const a = document.querySelectorAll('.keyboard') // получаем элем. с классом keyboard
+const symbol = {
+    'Control': 'ctrl',
+    'Alt': 'alt',
+    ' ': 'space',
+    'Enter': 'enter'
+}
 function t11(event) {
-    console.log(event);
-
+    // console.log(event);
+    // получаем символ
+    let k = event.key;
+    // проверяем, есть ли он в массиве замен
+    if (symbol[k] !== undefined) {
+        k = symbol[k]
+    }
+    // очищаем класс у всех кнопок
+    a.forEach(el => el.classList.remove('active'))
+    // получаем кнопку
+    let singleKey = document.querySelector(`.keyboard[data="${k}"]`);
+    // если кнопка есть, добавляем класс
+    if (singleKey) {
+        singleKey.classList.add('active')
+    }
 }
 
 document.querySelector('.i-11').onkeydown = t11;
