@@ -137,16 +137,15 @@ let w = 75;
 function t10(event) {
     // увеличиваем  h, w, потом присваиваем как свойства...
     console.log(event)
-    if (event.keyCode == 39 || event.keyCode == 37) {
+    if (event.keyCode === 39 || event.keyCode === 37) {
         w++;
         document.querySelector('.block-10').style.width = `${w}px`;
 
-    } if (event.keyCode == 30 || event.keyCode == 40) {
+    } if (event.keyCode === 30 || event.keyCode === 40) {
         h++;
         document.querySelector('.block-10').style.height = `${h}px`;
 
     }
-
 
 }
 
@@ -162,7 +161,7 @@ document.querySelector('.i-10').onkeydown = t10;
 */
 
 function t11(event) {
-    console.log(event.key);
+    console.log(event);
 
 }
 
