@@ -84,12 +84,6 @@ function t7() {
     let inputVal = '';
     let a = Math.floor(Math.random() * a7.length)
     inputVal = a7[a]
-    // console.log(a)
-    // for (let i = 0; i < a7.length; i++) {
-    //     if (i == a) {
-    //         inputVal = a7[i];
-    //     }
-    // }
     document.querySelector('.out-7').innerHTML = inputVal;
 }
 
@@ -103,10 +97,18 @@ const a8 = {
     o: 0,
     l: 7
 }
-
+let out8 = '';
 function t8(event) {
+
     // 1. Получаем из event введенный символ
+
     // 2. Проверяем наличие такого ключа в a8 - уже делали это раньше!!!!
+    if (a8[event.key] !== undefined) {
+        out8 += a8[event.key]
+    } else {
+        out8 += event.key
+    }
+    document.querySelector('.out-8').innerHTML = out8;
     // 3. Если есть дописываем в out-8 символ из массива a8. Если нет - введенный символ.
 }
 
