@@ -12,23 +12,29 @@ document.querySelector('.div-1').addEventListener('touchstart', t1)
 
 // Task 2 ============================================
 /* Создайте блок div-2. Добавьте на него событие touchstart. Выведите в out-2 число срабатываний события. */
-let count2 = 0;
-function t2() {
-    document.querySelector('.out-2').innerHTML = count2;
-    count2++;
-}
 
+function t2(event) {
+    console.log(event)
+    document.querySelector('.out-2').innerHTML = event.touches.length;
+
+}
 
 document.querySelector('.div-2').addEventListener('touchstart', t2)
 
 // Task 3 ============================================
 /*  Создайте блок div-3_1 и div-3_2. Добавьте на них событие touchstart. Выведите в out-3 номер блока 1 или 2 на котором сработало событие. */
 
-function t3() {
-
+function t3(event) {
+    let out3 = document.querySelector('.out-3');
+    if (event.target.classList.contains('.div-3_1')) {
+        out3.innerHTML = 1
+    } if (event.target.classList.contains('.div-3_2')) {
+        out3.innerHTML = 2
+    }
 }
 
-// ваше событие здесь!!!
+document.querySelector('.div-3_1').addEventListener('touchstart', t3)
+document.querySelector('.div-3_2').addEventListener('touchstart', t3)
 
 
 // Task 4 ============================================
