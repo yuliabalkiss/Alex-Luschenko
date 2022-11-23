@@ -3,8 +3,10 @@
 /* Создайте блок div-1. Добавьте на него событие touchstart. Выведите в out-1 слово  touch если событие сработает. */
 
 function t1() {
+    document.querySelector('.out-1').innerHTML =
+        'touch';
 }
-
+document.querySelector('.div-1').addEventListener('touchstart', t1)
 // ваше событие здесь!!!
 
 // Task 2 ============================================
