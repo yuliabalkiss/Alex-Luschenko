@@ -81,7 +81,16 @@ document.querySelector('.i-6').onkeypress = t6;
 const a7 = ['a', 'z', 'x', 'w', 'y', 't'];
 
 function t7() {
-
+    let inputVal = '';
+    let a = Math.floor(Math.random() * a7.length)
+    inputVal = a7[a]
+    // console.log(a)
+    // for (let i = 0; i < a7.length; i++) {
+    //     if (i == a) {
+    //         inputVal = a7[i];
+    //     }
+    // }
+    document.querySelector('.out-7').innerHTML = inputVal;
 }
 
 document.querySelector('.i-7').onkeydown = t7;
