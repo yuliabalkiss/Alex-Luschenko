@@ -39,16 +39,13 @@ document.querySelector('.i-3').onkeypress = t3;
 // Task 4 ============================================
 /*  Дан input .i-4. Напишите функцию t4, которая выводит в .out-4 только символы в нижнем регистре. Т.е. ввели ab4Bci в out-4 получаем ab4ci. */
 
+let out4 = '';
 function t4(event) {
-    console.log(event.keyCode);
-    let out = []
-    if (event.keyCode == toLowerCase(event.keyCode)) {
-        out.push(event.keyCode);
+    // console.log(event);
+    if (event.key == event.key.toLowerCase()) {
+        out4 += event.key;
     }
-
-
-
-    document.querySelector('.out-4').textContent = out;
+    document.querySelector('.out-4').innerHTML = out4;
 }
 
 document.querySelector('.i-4').onkeypress = t4;
