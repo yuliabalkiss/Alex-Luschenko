@@ -117,7 +117,7 @@ document.querySelector('.div-10').addEventListener('touchmove', t10)
 function t11(event) {
     console.log(event)
     let rX = event.touches[0].radiusX
-    let rY = event.touches[0].radiusX
+    let rY = event.touches[0].radiusY
     document.querySelector('.out-11').innerHTML = `radiusX: ${rX}<br>radiusY: ${rY}`
 
 }
