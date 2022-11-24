@@ -94,8 +94,8 @@ document.querySelector('.div-8').addEventListener('touchstart', t8)
 
 function t9(event) {
     console.log(event)
-    let a = event.touches.length
-    document.querySelector('.out-9').innerHTML = a
+    let a = document.querySelector('.out-9')
+    a.innerHTML = event.touches.length
 }
 
 document.querySelector('.div-9').addEventListener('touchstart', t9)
