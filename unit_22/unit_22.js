@@ -8,12 +8,11 @@ function t1() {
         let a = 22;
         let c = a + d;
     }
-    catch {
+    catch (error) {
         document.querySelector('.out-1').innerHTML = 1;
     }
 
 }
-
 
 document.querySelector('.b-1').onclick = t1;
 
@@ -23,7 +22,12 @@ document.querySelector('.b-1').onclick = t1;
 function t2() {
     let a = 4;
     let b = 5;
-    document.querySelector('.out-2222222').innerHTML = a * b;
+    try {
+        document.querySelector('.out-2222222').innerHTML = a * b;
+    }
+    catch (error) {
+        document.querySelector('.out-2').innerHTML = error;
+    }
 
 }
 
