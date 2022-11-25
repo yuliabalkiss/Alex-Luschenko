@@ -142,6 +142,8 @@ next.onclick = nextFunction;
 
 const prev = document.querySelector('.prev');
 prev.onclick = prevFunction;
+const reset = document.querySelector('.reset');
+reset.onclick = resetFunction;
 
 function nextFunction() {
     if (count + 1 < images.length) {
@@ -171,6 +173,13 @@ function prevFunction() {
     maxImg.src = images[count].src
 }
 
+
+function resetFunction() {
+    images.forEach(el => el.classList.remove('active-img'))
+    images[0].classList.toggle('active-img')
+    let maxImg = document.querySelector('.img-12-max')
+    maxImg.src = images[0].src
+}
 
 
 
