@@ -4,11 +4,16 @@
 
 function t1() {
     // тут добавляете try
-    let a = 22;
-    let c = a + d;
-    // тут catch
-    // .. и вывод
+    try {
+        let a = 22;
+        let c = a + d;
+    }
+    catch {
+        document.querySelector('.out-1').innerHTML = 1;
+    }
+
 }
+
 
 document.querySelector('.b-1').onclick = t1;
 
@@ -18,7 +23,7 @@ document.querySelector('.b-1').onclick = t1;
 function t2() {
     let a = 4;
     let b = 5;
-    document.querySelector('.out-2222222').innerHTML = a*b;
+    document.querySelector('.out-2222222').innerHTML = a * b;
 
 }
 
@@ -32,7 +37,7 @@ document.querySelector('.b-2').onclick = t2;
 function t3() {
     let a = 4;
     let b = 5;
-    document.querySelector('.out-3').innerHTML = a*b;
+    document.querySelector('.out-3').innerHTML = a * b;
 }
 
 document.querySelector('.b-3').onclick = t3;
@@ -40,7 +45,7 @@ document.querySelector('.b-3').onclick = t3;
 //  Task 4
 // Дана переменная a. В переменную делается push. Используя try catch отловите ошибки если они есть. Если ошибка вывести в out-4 число 0. Если не ошибка - то результирующий массив через пробел.
 
-let a = [2,3,4];
+let a = [2, 3, 4];
 // a = 5;
 
 function t4() {
