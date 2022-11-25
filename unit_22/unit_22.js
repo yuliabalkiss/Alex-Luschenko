@@ -62,7 +62,13 @@ let a = [2, 3, 4];
 // a = 5;
 
 function t4() {
-    a.push(7);
+    try {
+        a.push(7);
+    }
+    catch (error) {
+        document.querySelector('.out-4').innerHTML = 0;
+    }
+    document.querySelector('.out-4').innerHTML = a;
 }
 
 document.querySelector('.b-4').onclick = t4;
