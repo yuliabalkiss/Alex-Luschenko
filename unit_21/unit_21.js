@@ -144,12 +144,35 @@ const prev = document.querySelector('.prev');
 prev.onclick = prevFunction;
 
 function nextFunction() {
+    if (count + 1 < images.length) {
+        count++
+    } else {
+        count = 0
+    }
+    images.forEach(el => el.classList.remove('active-img'))
+    images[count].classList.add('active-img')
+    let maxImg = document.querySelector('.img-12-max')
+    maxImg.src = images[count].src
+
 
 }
 
 function prevFunction() {
 
+    if (count - 1 >= 0) {
+        count--;
+    } else if (count === 0) {
+        count = images.length - 1
+    }
+
+    images.forEach(el => el.classList.remove('active-img'))
+    images[count].classList.toggle('active-img')
+    let maxImg = document.querySelector('.img-12-max')
+    maxImg.src = images[count].src
 }
+
+
+
 
 
 // ваше событие здесь!!!
