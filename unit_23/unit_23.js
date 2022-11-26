@@ -12,7 +12,8 @@ document.querySelector('.b-1').addEventListener('click', t1)
 /* Создайте функцию t2 которая записывает  в LS  массив a2 = [7,6,5]. Ключ a2. Проверьте что происходит при повторном вызове функции. Запускается ф-я по кнопкуе b-2. */
 const a2 = [7, 6, 5]
 function t2() {
-    localStorage.setItem('5', 11)
+
+    localStorage.setItem('a2', a2)
 }
 
 document.querySelector('.b-2').addEventListener('click', t2)
