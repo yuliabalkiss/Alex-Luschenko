@@ -13,9 +13,8 @@ document.querySelector('.b-1').addEventListener('click', t1)
 const a2 = [7, 6, 5]
 function t2() {
 
-    localStorage.setItem('a2', a2)
+    localStorage.setItem('a2', JSON.stringify(a2))//запись в LocalStorage
 }
-
 document.querySelector('.b-2').addEventListener('click', t2)
 
 
@@ -24,9 +23,17 @@ document.querySelector('.b-2').addEventListener('click', t2)
 
 function t3() {
 
-}
+    let a = localStorage.getItem('a2'); //извлечение  из LocalStorage
+    a = JSON.parse(a);
 
-// ваше событие здесь!!!
+    let out = '';
+    for (let i = 0; i < a.length; i++) {
+        out += `${i} ${a[i]}<br>`;
+    }
+    document.querySelector('.out-3').innerHTML = out;
+}
+document.querySelector('.b-3').addEventListener('click', t3)
+
 
 
 // Task 4 ============================================
