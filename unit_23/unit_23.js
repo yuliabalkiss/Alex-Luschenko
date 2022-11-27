@@ -90,7 +90,6 @@ function t7() {
     let inputVal = document.querySelector('.i-7').value;
     a7.push(inputVal);
     let a = localStorage.setItem('a7', JSON.stringify(a7));
-    a = JSON.parse(a)
     console.log(a)
     localStorage.setItem('a7', JSON.stringify(a7))
 
