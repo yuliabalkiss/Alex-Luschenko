@@ -38,12 +38,17 @@ document.querySelector('.b-3').addEventListener('click', t3)
 
 // Task 4 ============================================
 /*  Создайте функцию t4 которая записывает  в LS  массив a4 = {hello: world, hi:mahai}. Ключ a4. Проверьте что происходит при повторном вызове функции. Запускается ф-я по кнопкуе b-4.*/
-
+let a4 = {
+    hello: world,
+    hi: mahai
+};
 function t4() {
-
+    let a = localStorage.setItem('a4', JSON.stringify(a4))
+    let b = localStorage.getItem('a4')
+    b.JSON.parse(b)
 }
+document.querySelector('.b-4').addEventListener('click', t4)
 
-// ваше событие здесь!!!
 
 // Task 5 ============================================
 /*   При нажатии кнопки b-5 выведите из LS сохранненный массив a4. Выведите в out-5 в формате ключ пробел значение перенос строки. */
