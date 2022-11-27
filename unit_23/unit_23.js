@@ -38,14 +38,16 @@ document.querySelector('.b-3').addEventListener('click', t3)
 
 // Task 4 ============================================
 /*  Создайте функцию t4 которая записывает  в LS  массив a4 = {hello: world, hi:mahai}. Ключ a4. Проверьте что происходит при повторном вызове функции. Запускается ф-я по кнопкуе b-4.*/
-let a4 = {
-    hello: world,
-    hi: mahai
+const a4 = {
+    hello: 'world',
+    hi: 'mahai'
 };
 function t4() {
-    let a = localStorage.setItem('a4', JSON.stringify(a4))
+    localStorage.setItem('a4', JSON.stringify(a4));
     let b = localStorage.getItem('a4')
-    b.JSON.parse(b)
+    b = JSON.parse(b)
+    // console.log(b)
+    // console.log(typeof b)
 }
 document.querySelector('.b-4').addEventListener('click', t4)
 
