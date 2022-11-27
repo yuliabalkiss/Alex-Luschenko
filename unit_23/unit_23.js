@@ -74,10 +74,10 @@ document.querySelector('.b-5').addEventListener('click', t5)
 /*  Создайте функцию t6 которая очищает весь LS. Запуск по кнопке b-6*/
 
 function t6() {
-
+    localStorage.clear();
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-6').addEventListener('click', t6)
 
 
 // Task 7 ============================================
