@@ -56,10 +56,19 @@ document.querySelector('.b-4').addEventListener('click', t4)
 /*   При нажатии кнопки b-5 выведите из LS сохранненный массив a4. Выведите в out-5 в формате ключ пробел значение перенос строки. */
 
 function t5() {
+    let c = localStorage.getItem('a4');
+    c = JSON.parse(c)
+    console.log(c)
+    let outStr = '';
+
+    for (let key in c) {
+        outStr += `${key} ${c[key]}<br>`
+    }
+    document.querySelector('.out-5').innerHTML = outStr;
 
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-5').addEventListener('click', t5)
 
 // Task 6 ============================================
 /*  Создайте функцию t6 которая очищает весь LS. Запуск по кнопке b-6*/
