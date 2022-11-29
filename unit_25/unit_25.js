@@ -48,11 +48,25 @@ document.querySelector('.b-2').addEventListener('click', t2)
 // Task 3 ============================================
 /*  Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 3. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет сумму чисел.  Выведите в out-3 результат. Запускаться функция должна по нажатию b-3. */
 
+const requestUrl3 = 'http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=3&num1=12&num2=11'
 function t3() {
+    let xhtpp = new XMLHttpRequest();
+    xhtpp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this.responseText)
+        }
+    }
+    xhtpp.open('GET', requestUrl3, true)
+    xhtpp.send()
+    function myFunction(data) {
+        a = data;
+        console.log(a)
+        document.querySelector('.out-3').innerHTML = a;
+    }
 
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-3').addEventListener('click', t3)
 
 
 // Task 4 ============================================
