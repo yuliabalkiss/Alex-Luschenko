@@ -1,12 +1,16 @@
 
 // Task 1 ============================================
 /* Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 1. Выведите в out-1 результат. Запускаться функция должна по нажатию b-1. */
-
+const requestUrl = 'http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=1'
 function t1() {
+    let xhtpp = new XMLHttpRequest();
+    xhtpp.open('GET', requestUrl)
+    xhtpp.send()
+    let a = xhtpp.onload
+    document.querySelector('.out-1').innerHTML = a
 }
 
-// ваше событие здесь!!!
-
+document.querySelector('.b-1').addEventListener('click', t1)
 // Task 2 ============================================
 /* Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 2. Добавьте параметр name с вашим именем на латинице. Если все сделано верно, сервер пришлет строку hello ваше имя. Выведите в out-2 результат. Запускаться функция должна по нажатию b-2. */
 
