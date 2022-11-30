@@ -247,38 +247,86 @@ document.querySelector('.b-11').addEventListener('click', t11)
 // Task 12 ============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 3. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет сумму чисел. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-12 результат. Запускаться функция должна по нажатию b-12.*/
 
+const requestUrl12 = 'http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=3&num1=33&num2=44'
 function t12() {
+    let xhtpp = new XMLHttpRequest();
+    xhtpp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this.responseText)
+        }
+    }
+    xhtpp.open('POST', requestUrl12, true)
+    xhtpp.send()
+    function myFunction(data) {
+        let a = data;
+        document.querySelector('.out-12').innerHTML = a
+    }
 
 }
-
-// ваше событие здесь!!!
+document.querySelector('.b-12').addEventListener('click', t12)
 
 // Task 13 ============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 4. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет случайное число в заданном диапазоне. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-13 результат. Запускаться функция должна по нажатию b-13.*/
 
+const requestUrl13 = 'http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=4&num1=13&num2=4'
 function t13() {
+    let xhtpp = new XMLHttpRequest();
+    xhtpp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this.responseText)
+        }
+    }
+    xhtpp.open('POST', requestUrl13, true)
+    xhtpp.send()
+    function myFunction(data) {
+        let a = data;
+        document.querySelector('.out-13').innerHTML = a
+    }
 
 }
-
-// ваше событие здесь!!!
+document.querySelector('.b-13').addEventListener('click', t13)
 
 // Task 14 ============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 5. Если все сделано верно, сервер вернет текущее время и дату. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-14 результат. Запускаться функция должна по нажатию b-14.*/
 
+const requestUrl14 = 'http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=5'
 function t14() {
+    let xhtpp = new XMLHttpRequest();
+    xhtpp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this.responseText)
+        }
+    }
+    xhtpp.open('POST', requestUrl14, true)
+    xhtpp.send()
+    function myFunction(data) {
+        let a = data;
+        document.querySelector('.out-14').innerHTML = a
+    }
 
 }
-
-// ваше событие здесь!!!
+document.querySelector('.b-14').addEventListener('click', t14)
 
 // Task 15============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 6. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет большее число. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-15 результат. Запускаться функция должна по нажатию b-15. */
 
+const requestUrl15 = 'http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=6&num1=55&num2=100'
 function t15() {
+    let xhtpp = new XMLHttpRequest();
+    xhtpp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this.responseText)
+        }
+    }
+    xhtpp.open('POST', requestUrl15, true)
+    xhtpp.send()
+    function myFunction(data) {
+        let a = data;
+        document.querySelector('.out-15').innerHTML = a
+    }
 
 }
-
-// ваше событие здесь!!!
+document.querySelector('.b-15').addEventListener('click', t15)
 
 // Task 16 ============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 7. Если все сделано верно, сервер случайную ссылку на изображение. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-16 результат. Запускаться функция должна по нажатию b-16. */
