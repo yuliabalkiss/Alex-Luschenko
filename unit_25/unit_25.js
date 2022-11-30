@@ -95,11 +95,25 @@ document.querySelector('.b-4').addEventListener('click', t4)
 // Task 5 ============================================
 /*  Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 5. Если все сделано верно, сервер вернет текущее время и дату. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-5 результат. Запускаться функция должна по нажатию b-5. */
 
+const requestUrl5 = 'http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=5'
 function t5() {
+    let xhtpp = new XMLHttpRequest();
+    xhtpp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this.responseText)
+        }
+    }
+    xhtpp.open('GET', requestUrl5, true)
+    xhtpp.send()
+    function myFunction(data) {
+        a = data;
+        console.log(a)
+        document.querySelector('.out-5').innerHTML = a;
+    }
 
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-5').addEventListener('click', t5)
 
 // Task 6 ============================================
 /*  Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 6. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет большее число. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-6 результат. Запускаться функция должна по нажатию b-6. */
