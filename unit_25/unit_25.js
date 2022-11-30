@@ -160,12 +160,23 @@ document.querySelector('.b-7').addEventListener('click', t7)
 
 // Task 8 ============================================
 /* Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 8. В качестве параметра по очереди укажите year равный году вашего рождения. Если все правильно сервер вернет ваш возраст. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-8 результат. Запускаться функция должна по нажатию b-8.*/
-
+const requestUrl8 = 'http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=8&year=1989'
 function t8() {
-
+    let xhtpp = new XMLHttpRequest();
+    xhtpp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this.responseText)
+        }
+    }
+    xhtpp.open("GET", requestUrl8, true);
+    xhtpp.send();
+    function myFunction(data) {
+        let a = data;
+        document.querySelector('.out-8').innerHTML = a;
+    }
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-8').addEventListener('click', t8)
 
 
 // Task 9 ============================================
