@@ -331,19 +331,44 @@ document.querySelector('.b-15').addEventListener('click', t15)
 // Task 16 ============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 7. Если все сделано верно, сервер случайную ссылку на изображение. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-16 результат. Запускаться функция должна по нажатию b-16. */
 
+const requestUrl16 = 'http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=7'
 function t16() {
+    let xhtpp = new XMLHttpRequest();
+    xhtpp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this.responseText)
+        }
+    }
+    xhtpp.open('POST', requestUrl16, true)
+    xhtpp.send()
+    function myFunction(data) {
+        let a = data;
+        document.querySelector('.out-16').innerHTML = a
+    }
 
 }
-
-// ваше событие здесь!!!
+document.querySelector('.b-16').addEventListener('click', t16)
 
 // Task 17 ============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 8. В качестве параметра по очереди укажите year равный году вашего рождения. Если все правильно сервер вернет ваш возраст. Не забывайте указывать параметр auth (ключ в чате).Выведите в out-17 результат. Запускаться функция должна по нажатию b-17. */
 
+const requestUrl17 = 'http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=8&year=1989'
 function t17() {
+    let xhtpp = new XMLHttpRequest();
+    xhtpp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this.responseText)
+        }
+    }
+    xhtpp.open('POST', requestUrl17, true)
+    xhtpp.send()
+    function myFunction(data) {
+        let a = data;
+        document.querySelector('.out-17').innerHTML = a
+    }
 
 }
-
+document.querySelector('.b-17').addEventListener('click', t17)
 // ваше событие здесь!!!
 
 // Task 18 ============================================
