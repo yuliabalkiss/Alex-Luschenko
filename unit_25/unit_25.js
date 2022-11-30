@@ -181,12 +181,23 @@ document.querySelector('.b-8').addEventListener('click', t8)
 
 // Task 9 ============================================
 /* Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 9. В качестве параметра по очереди укажите m = 1, d=1, y=1. Если все сделано верно, сервер возвратит дату или месяц или год. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-9 результат. Запускаться функция должна по нажатию b-9. */
-
+const requestUrl9 = 'http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=9&m=1'
 function t9() {
-
+    let xhtpp = new XMLHttpRequest();
+    xhtpp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this.responseText)
+        }
+    }
+    xhtpp.open('GET', requestUrl9, true);
+    xhtpp.send();
+    function myFunction(data) {
+        let a = data;
+        document.querySelector('.out-9').innerHTML = a;
+    }
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-9').addEventListener('click', t9)
 
 
 // Task 10 ============================================
