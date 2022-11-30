@@ -214,6 +214,7 @@ function t10() {
         }
     }
     xhtpp.open('POST', requestUrl10, true)
+    xhtpp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhtpp.send()
     function myFunction(data) {
         let a = data;
@@ -235,6 +236,7 @@ function t11() {
         }
     }
     xhtpp.open('POST', requestUrl11, true)
+    xhtpp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhtpp.send()
     function myFunction(data) {
         let a = data;
@@ -256,6 +258,7 @@ function t12() {
         }
     }
     xhtpp.open('POST', requestUrl12, true)
+    xhtpp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhtpp.send()
     function myFunction(data) {
         let a = data;
@@ -277,6 +280,7 @@ function t13() {
         }
     }
     xhtpp.open('POST', requestUrl13, true)
+    xhtpp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhtpp.send()
     function myFunction(data) {
         let a = data;
@@ -298,6 +302,7 @@ function t14() {
         }
     }
     xhtpp.open('POST', requestUrl14, true)
+    xhtpp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhtpp.send()
     function myFunction(data) {
         let a = data;
@@ -319,6 +324,7 @@ function t15() {
         }
     }
     xhtpp.open('POST', requestUrl15, true)
+    xhtpp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhtpp.send()
     function myFunction(data) {
         let a = data;
@@ -340,6 +346,7 @@ function t16() {
         }
     }
     xhtpp.open('POST', requestUrl16, true)
+    xhtpp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhtpp.send()
     function myFunction(data) {
         let a = data;
@@ -361,6 +368,7 @@ function t17() {
         }
     }
     xhtpp.open('POST', requestUrl17, true)
+    xhtpp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhtpp.send()
     function myFunction(data) {
         let a = data;
@@ -382,7 +390,8 @@ function t18() {
             myFunction(this.responseText)
         }
     }
-    xhtpp.open('POST', requestUrl18, true)
+    xhtpp.open('POST', requestUrl18, true);
+    xhtpp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhtpp.send()
     function myFunction(data) {
         let a = data;
