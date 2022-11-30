@@ -205,9 +205,24 @@ document.querySelector('.b-9').addEventListener('click', t9)
 
 */
 
+const requestUrl10 = 'http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=1'
 function t10() {
+    let xhtpp = new XMLHttpRequest();
+    xhtpp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this.responseText)
+        }
+    }
+    xhtpp.open('POST', requestUrl, true)
+    xhtpp.send()
+    function myFunction(data) {
+        let a = data;
+        document.querySelector('.out-10').innerHTML = a
+    }
 
 }
+document.querySelector('.b-10').addEventListener('click', t10)
+
 // Task 11 ============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 2. Добавьте параметр name с вашим именем на латинице. Если все сделано верно, сервер пришлет строку hello ваше имя. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-11 результат. Запускаться функция должна по нажатию b-11. */
 
