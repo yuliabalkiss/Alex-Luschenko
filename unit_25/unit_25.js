@@ -14,7 +14,7 @@ function t1() {
     xhtpp.open('GET', requestUrl, true)
     xhtpp.send()
     function myFunction(data) {
-        a = data;
+        let a = data;
         document.querySelector('.out-1').innerHTML = a
     }
 
@@ -118,7 +118,7 @@ document.querySelector('.b-5').addEventListener('click', t5)
 // Task 6 ============================================
 /*  Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 6. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет большее число. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-6 результат. Запускаться функция должна по нажатию b-6. */
 
-const requestUrl6 = 'http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=6&num1=1&num2=30'
+const requestUrl6 = 'http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=6&num1=1&num2='
 function t6() {
     let xhtpp = new XMLHttpRequest();
     xhtpp.onreadystatechange = function () {
@@ -140,12 +140,23 @@ document.querySelector('.b-6').addEventListener('click', t6)
 
 // Task 7 ============================================
 /*  Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 7. Если все сделано верно, сервер случайную ссылку на изображение. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-7 результат. Запускаться функция должна по нажатию b-7. */
-
+const requestUrl7 = 'http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=7'
 function t7() {
-
+    let xhtpp = new XMLHttpRequest();
+    xhtpp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this.responseText)
+        }
+    }
+    xhtpp.open('Get', requestUrl7, true)
+    xhtpp.send();
+    function myFunction(data) {
+        let a = data;
+        document.querySelector('.out-7').innerHTML = a;
+    }
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-7').addEventListener('click', t7)
 
 // Task 8 ============================================
 /* Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 8. В качестве параметра по очереди укажите year равный году вашего рождения. Если все правильно сервер вернет ваш возраст. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-8 результат. Запускаться функция должна по нажатию b-8.*/
