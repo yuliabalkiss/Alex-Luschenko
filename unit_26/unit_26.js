@@ -1,11 +1,32 @@
 
 // Task 1 ============================================
 /* Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 1. Выведите в out-1 результат. Запускаться функция должна по нажатию b-1. */
-
+const requestUrl = 'http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=1'
 function t1() {
-}
+    let xhtpp = new XMLHttpRequest();
+    xhtpp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            callbackFunction(this.responseText)
+        }
+    }
+    xhtpp.open("GET", requestUrl, true)
+    xhtpp.send();
 
-// ваше событие здесь!!!
+    function callbackFunction(data) {
+        console.log(data);
+    }
+}
+fetch('http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=1')// 1 парам - адрес, на который мы посылаем наш запрос 2. парам-обработчик результата ответа!
+    .then(data => {
+        console.log(data) // возвратился response
+
+        return data.text()
+    })
+    .then(data => {
+        console.log(data);
+    })
+
+document.querySelector('.b-1').addEventListener('click', t1)
 
 // Task 2 ============================================
 /* Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 2. Добавьте параметр name с вашим именем на латинице. Если все сделано верно, сервер пришлет строку hello ваше имя. Выведите в out-2 результат. Запускаться функция должна по нажатию b-2. */
@@ -92,6 +113,7 @@ function t9() {
 function t10() {
 
 }
+document.querySelector('.out-10').addEventListener('click', t10)
 // Task 11 ============================================
 /*  Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 2. Добавьте параметр name с вашим именем на латинице. Если все сделано верно, сервер пришлет строку hello ваше имя. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-11 результат. Запускаться функция должна по нажатию b-11. */
 
