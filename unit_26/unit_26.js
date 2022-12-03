@@ -111,9 +111,21 @@ function t9() {
 */
 
 function t10() {
+    fetch('http://getpost.itgid.info/index2.php', {
+        method: 'POST', //*GET, POST, PUT, DELETE
+        headers: {
+            //Content-Type': 'application/json'
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'auth=7859d9d42a8834141d529577207c9596&action=1', //тип данных в body должен соответствовать значению заголовка 'Content-Type'
 
+    })
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector('.out-10').innerHTML = data;
+        })
 }
-document.querySelector('.out-10').addEventListener('click', t10)
+document.querySelector('.b-10').addEventListener('click', t10)
 // Task 11 ============================================
 /*  Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 2. Добавьте параметр name с вашим именем на латинице. Если все сделано верно, сервер пришлет строку hello ваше имя. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-11 результат. Запускаться функция должна по нажатию b-11. */
 
