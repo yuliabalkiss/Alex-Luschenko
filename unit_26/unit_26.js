@@ -121,8 +121,9 @@ function t10() {
 
     })
         .then(response => response.text())
-        .then(data => {
-            document.querySelector('.out-10').innerHTML = data;
+        .then(response => {
+            console.log(response)
+            document.querySelector('.out-10').innerHTML = response;
         })
 }
 document.querySelector('.b-10').addEventListener('click', t10)
@@ -130,10 +131,22 @@ document.querySelector('.b-10').addEventListener('click', t10)
 /*  Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 2. Добавьте параметр name с вашим именем на латинице. Если все сделано верно, сервер пришлет строку hello ваше имя. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-11 результат. Запускаться функция должна по нажатию b-11. */
 
 function t11() {
+    fetch('http://getpost.itgid.info/index2.php', {
+        method: 'POST', //*GET, POST, PUT, DELETE
+        headers: {
+            //Content-Type': 'application/json'
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'auth=7859d9d42a8834141d529577207c9596&action=2&name=Yulia', //тип данных в body должен соответствовать значению заголовка 'Content-Type'
 
+    })
+        .then(response => response.text())
+        .then(response => {
+            console.log(response)
+            document.querySelector('.out-11').innerHTML = response;
+        })
 }
-
-// ваше событие здесь!!!
+document.querySelector('.b-11').addEventListener('click', t11)
 
 // Task 12 ============================================
 /*  Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 3. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет сумму чисел. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-12 результат. Запускаться функция должна по нажатию b-12.*/
