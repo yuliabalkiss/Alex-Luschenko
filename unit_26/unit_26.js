@@ -42,67 +42,136 @@ document.querySelector('.b-2').addEventListener('click', t2)
 /*  Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 3. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет сумму чисел.  Выведите в out-3 результат. Запускаться функция должна по нажатию b-3. */
 
 function t3() {
+    fetch('http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=3&num1=5&num2=10')// 1 парам - адрес, на который мы посылаем наш запрос 2. парам-обработчик результата ответа!
+        .then(data => {
+            console.log(data) // возвратился response
+
+            return data.text()
+        })
+        .then(data => {
+            console.log(data);
+            document.querySelector('.out-3').innerHTML = data;
+        })
+
 
 }
-
-// ваше событие здесь!!!
+document.querySelector('.b-3').addEventListener('click', t3)
 
 
 // Task 4 ============================================
 /*  Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 4. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет случайное число в заданном диапазоне. Не забывайте указывать параметр auth (ключ в чате).  Выведите в out-4 результат. Запускаться функция должна по нажатию b-4. */
 
 function t4() {
+    fetch('http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=4&num1=5&num2=10')// 1 парам - адрес, на который мы посылаем наш запрос 2. парам-обработчик результата ответа!
+        .then(data => {
+            console.log(data) // возвратился response
+
+            return data.text()
+        })
+        .then(data => {
+            console.log(data);
+            document.querySelector('.out-4').innerHTML = data;
+        })
+
 
 }
-
-// ваше событие здесь!!!
+document.querySelector('.b-4').addEventListener('click', t4)
 
 // Task 5 ============================================
 /*  Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 5. Если все сделано верно, сервер вернет текущее время и дату. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-5 результат. Запускаться функция должна по нажатию b-5. */
 
 function t5() {
+    fetch('http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=5')// 1 парам - адрес, на который мы посылаем наш запрос 2. парам-обработчик результата ответа!
+        .then(data => {
+            console.log(data) // возвратился response
+
+            return data.text()
+        })
+        .then(data => {
+            console.log(data);
+            document.querySelector('.out-5').innerHTML = data;
+        })
+
 
 }
-
-// ваше событие здесь!!!
-
+document.querySelector('.b-5').addEventListener('click', t5)
 // Task 6 ============================================
 /*  Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 6. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет большее число. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-6 результат. Запускаться функция должна по нажатию b-6. */
 
 function t6() {
+    fetch('http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=6&num1=5&num2=10')// 1 парам - адрес, на который мы посылаем наш запрос 2. парам-обработчик результата ответа!
+        .then(data => {
+            console.log(data) // возвратился response
+
+            return data.text()
+        })
+        .then(data => {
+            console.log(data);
+            document.querySelector('.out-6').innerHTML = data;
+        })
+
 
 }
-
-// ваше событие здесь!!!
+document.querySelector('.b-6').addEventListener('click', t6)
 
 
 // Task 7 ============================================
 /*  Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 7. Если все сделано верно, сервер случайную ссылку на изображение. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-7 результат. Запускаться функция должна по нажатию b-7. */
 
 function t7() {
+    fetch('http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=7')// 1 парам - адрес, на который мы посылаем наш запрос 2. парам-обработчик результата ответа!
+        .then(data => {
+            console.log(data) // возвратился response
+
+            return data.text()
+        })
+        .then(data => {
+            console.log(data);
+            document.querySelector('.out-7').innerHTML = data;
+        })
+
 
 }
-
-// ваше событие здесь!!!
+document.querySelector('.b-7').addEventListener('click', t7)
 
 // Task 8 ============================================
 /* Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 8. В качестве параметра по очереди укажите year равный году вашего рождения. Если все правильно сервер вернет ваш возраст. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-8 результат. Запускаться функция должна по нажатию b-8.*/
 
 function t8() {
+    fetch('http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=8&year=1989')// 1 парам - адрес, на который мы посылаем наш запрос 2. парам-обработчик результата ответа!
+        .then(data => {
+            console.log(data) // возвратился response
+
+            return data.text()
+        })
+        .then(data => {
+            console.log(data);
+            document.querySelector('.out-8').innerHTML = data;
+        })
+
 
 }
-
-// ваше событие здесь!!!
+document.querySelector('.b-8').addEventListener('click', t8)
 
 
 // Task 9 ============================================
 /* Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 9. В качестве параметра по очереди укажите m = 1, d=1, y=1. Если все сделано верно, сервер возвратит дату или месяц или год. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-9 результат. Запускаться функция должна по нажатию b-9. */
 
 function t9() {
+    fetch('http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=9&m=1')// 1 парам - адрес, на который мы посылаем наш запрос 2. парам-обработчик результата ответа!
+        .then(data => {
+            console.log(data) // возвратился response
+
+            return data.text()
+        })
+        .then(data => {
+            console.log(data);
+            document.querySelector('.out-9').innerHTML = data;
+        })
+
 
 }
-
-// ваше событие здесь!!!
+document.querySelector('.b-9').addEventListener('click', t9)
 
 
 // Task 10 ============================================
