@@ -1,41 +1,41 @@
 
 // Task 1 ============================================
 /* Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 1. Выведите в out-1 результат. Запускаться функция должна по нажатию b-1. */
-const requestUrl = 'http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=1'
+
 function t1() {
-    let xhtpp = new XMLHttpRequest();
-    xhtpp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            callbackFunction(this.responseText)
-        }
-    }
-    xhtpp.open("GET", requestUrl, true)
-    xhtpp.send();
+    fetch('http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=1')// 1 парам - адрес, на который мы посылаем наш запрос 2. парам-обработчик результата ответа!
+        .then(data => {
+            console.log(data) // возвратился response
 
-    function callbackFunction(data) {
-        console.log(data);
-    }
+            return data.text()
+        })
+        .then(data => {
+            console.log(data);
+            document.querySelector('.out-1').innerHTML = data;
+        })
+
+
 }
-fetch('http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=1')// 1 парам - адрес, на который мы посылаем наш запрос 2. парам-обработчик результата ответа!
-    .then(data => {
-        console.log(data) // возвратился response
-
-        return data.text()
-    })
-    .then(data => {
-        console.log(data);
-    })
-
 document.querySelector('.b-1').addEventListener('click', t1)
 
 // Task 2 ============================================
 /* Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 2. Добавьте параметр name с вашим именем на латинице. Если все сделано верно, сервер пришлет строку hello ваше имя. Выведите в out-2 результат. Запускаться функция должна по нажатию b-2. */
 
 function t2() {
+    fetch('http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=2&name=Yulia')// 1 парам - адрес, на который мы посылаем наш запрос 2. парам-обработчик результата ответа!
+        .then(data => {
+            console.log(data) // возвратился response
+
+            return data.text()
+        })
+        .then(data => {
+            console.log(data);
+            document.querySelector('.out-2').innerHTML = data;
+        })
+
 
 }
-
-// ваше событие здесь!!!
+document.querySelector('.b-2').addEventListener('click', t2)
 
 
 // Task 3 ============================================
