@@ -313,8 +313,39 @@ document.querySelector('.b-7').addEventListener('click', t7)
 */
 
 function t8() {
+    let a = new Promise((resolve, reject) => {
+        fetch('http://getpost.itgid.info/index2.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: 'auth=7859d9d42a8834141d529577207c9596&action=7',
+        })
 
+            .then(data => {
+                resolve(data.text());
+            })
+    });
+
+    let b = new Promise((resolve, reject) => {
+        fetch('http://getpost.itgid.info/index2.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: 'auth=7859d9d42a8834141d529577207c9596&action=8&year=1989',
+        })
+
+            .then(data => {
+                resolve(data.text());
+            })
+    });
+
+    Promise.all([a, b]).then(value => {
+        let out = value;
+        document.querySelector('.out-8').innerHTML = value;
+    })
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-8').addEventListener('click', t8)
 
