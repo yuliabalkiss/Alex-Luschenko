@@ -85,10 +85,30 @@ document.querySelector('.b-2').addEventListener('click', t2)
                  */
 
 function t3() {
+    let a = new Promise((resolve, reject) => {
+        fetch('http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=5')
+            .then(data => {
+                resolve(data.text());
+            })
+    });
 
+    let b = new Promise((resolve, reject) => {
+        fetch('http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=6&num1=12&num2=17')
+            .then(data => {
+                resolve(data.text());
+            })
+    });
+
+    Promise.all([a, b]).then(value => {
+        let out = value
+        // console.log(value[0])
+        // console.log(value[1])
+        document.querySelector('.out-3').innerHTML = value;
+    })
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-3').addEventListener('click', t3)
+
 
 
 // Task 4 ============================================
@@ -105,10 +125,29 @@ function t3() {
 */
 
 function t4() {
+    let a = new Promise((resolve, reject) => {
+        fetch('http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=7')
+            .then(data => {
+                resolve(data.text());
+            })
+    });
 
+    let b = new Promise((resolve, reject) => {
+        fetch('http://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=8&year=1989')
+            .then(data => {
+                resolve(data.text());
+            })
+    });
+
+    Promise.all([a, b]).then(value => {
+        let out = value
+        // console.log(value[0])
+        // console.log(value[1])
+        document.querySelector('.out-4').innerHTML = value;
+    })
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-4').addEventListener('click', t4)
 
 // Task 5 ============================================
 /*  
@@ -121,10 +160,42 @@ POST запрос на сайт http://getpost.itgid.info/index2.php. В кач�
 */
 
 function t5() {
+    let a = new Promise((resolve, reject) => {
+        fetch('http://getpost.itgid.info/index2.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: 'auth=7859d9d42a8834141d529577207c9596&action=1',
+        })
 
+            .then(data => {
+                resolve(data.text());
+            })
+    });
+
+    let b = new Promise((resolve, reject) => {
+        fetch('http://getpost.itgid.info/index2.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: 'auth=7859d9d42a8834141d529577207c9596&action=2',
+        })
+
+            .then(data => {
+                resolve(data.text());
+            })
+    });
+
+    Promise.all([a, b]).then(value => {
+        let out = value;
+        document.querySelector('.out-5').innerHTML = value;
+    })
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-5').addEventListener('click', t5)
+
 
 // Task 6 ============================================
 /* 
@@ -142,10 +213,41 @@ function t5() {
 */
 
 function t6() {
+    let a = new Promise((resolve, reject) => {
+        fetch('http://getpost.itgid.info/index2.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: 'auth=7859d9d42a8834141d529577207c9596&action=3&num1=18&num2=33',
+        })
 
+            .then(data => {
+                resolve(data.text());
+            })
+    });
+
+    let b = new Promise((resolve, reject) => {
+        fetch('http://getpost.itgid.info/index2.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: 'auth=7859d9d42a8834141d529577207c9596&action=4&num1=18&num2=33',
+        })
+
+            .then(data => {
+                resolve(data.text());
+            })
+    });
+
+    Promise.all([a, b]).then(value => {
+        let out = value;
+        document.querySelector('.out-6').innerHTML = value;
+    })
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-6').addEventListener('click', t6)
 
 
 // Task 7 ============================================
