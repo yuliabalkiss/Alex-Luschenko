@@ -22,6 +22,6 @@ class Goods {
         let image = document.createElement('img');
         image.src = this.image;
         myDiv.append(image);
-
+        return myDiv;
     }
 }
