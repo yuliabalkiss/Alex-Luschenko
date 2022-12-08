@@ -6,11 +6,12 @@ class Goods {
         this.price = price
         this.image = image
         this.count = count
-        // определяем метод
-        this.draw = function () {
-            let out = document.createElement('div');
-            document.querySelector('.out-4').append(out);
-            out.classList.add()
-        }
+    }
+    draw() {
+        //создаем объект, где товар будет помещаться
+        let myDiv = document.createElement('div');
+        // создаем элемент и именем и добавляем в div
+        let nameEl = document.createElement('h1');
+        nameEl.innerText = this.name;
     }
 }
